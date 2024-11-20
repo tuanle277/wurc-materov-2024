@@ -1,9 +1,15 @@
 
 # wurc-materov-2024
 
+### Setup
+
 Create a new workspace:
+
 `mkdir -p ~/ros2_ws/src`
-then `cd ~/ros2_ws/src`
+
+then
+
+`cd ~/ros2_ws/src`
 
 `src` is where the packages as folders are. Add in the materov folder/package sent above in it (it will be pushed later). Within it
 + `setup.py`: take a look at the entry_points list that allows putting up nodes. More comments in the file
@@ -13,7 +19,7 @@ Remember to source the ROS2 main install overlay before running any ROS commands
 
 `source /opt/ros/<distro>/setup.bash`
 
-To run:
+### To run
 + `colcon build` (run this everytime after changing the node codes) in `ros2_ws` to create the necessary files/folders. 
 + `source install/setup.bash` (only need to run this once for each terminal instance)
 + `ros2 run <package_name> <node name>`
@@ -22,6 +28,8 @@ To run:
 Refer to these guides to start writing: https://docs.ros.org/en/humble/Tutorials/.
 
 Learn some basic things like: node, message types, topics, publisher/subscriber (all in python).
+
+### Game controller (joystick)
 
 To install Joystick support package
 
@@ -34,5 +42,7 @@ To run joystick node
 To see joystick raw values
 
 `ros2 topic echo /joy`
+
+See raw value difinitions here https://github.com/ros-drivers/joystick_drivers/tree/ros2/joy
 
 Credit to Kevin Le
