@@ -18,10 +18,10 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 
-class KeyMapping(Node):
+class Spatial(Node):
 
     def __init__(self):
-        super().__init__('key_mapping') # name of the node
+        super().__init__('spatial') # name of the node
         self.subscription = self.create_subscription(
             String, # message type of the topic
             'topic', # name of the topic
@@ -36,14 +36,14 @@ class KeyMapping(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    key_mapping = KeyMapping()
+    spatial = Spatial()
 
-    rclpy.spin(key_mapping)
+    rclpy.spin(spatial)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    key_mapping.destroy_node()
+    spatial.destroy_node()
     rclpy.shutdown()
 
 
