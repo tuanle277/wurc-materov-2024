@@ -10,6 +10,7 @@ then `cd ~/ros2_ws/src`
 + `materov` folder: contains all the python files, each contains a node. More comments in the file. Right now we have 3 nodes mentioned above.
 
 Remember to source the ROS2 main install overlay before running any ROS commands
+
 `source /opt/ros/<distro>/setup.bash`
 
 To run:
@@ -19,15 +20,19 @@ To run:
 + in our case: `ros2 run materov  <node name>`
 
 Refer to these guides to start writing: https://docs.ros.org/en/humble/Tutorials/.
+
 Learn some basic things like: node, message types, topics, publisher/subscriber (all in python).
 
 To install Joystick support package
+
 `sudo apt install ros-humble-joy`
 
 To run joystick node
+
 `ros2 launch teleop_twist_joy teleop-launch.py`
 
 To see joystick raw values
+
 `ros2 topic echo /joy`
 
 Credit to Kevin Le
