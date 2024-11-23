@@ -5,11 +5,11 @@
 
 Create a new workspace:
 
-`mkdir -p ~/ros2_ws/src`
+`mkdir -p ~/ros2_ws`
 
 then
 
-`cd ~/ros2_ws/src`
+`cd ~/ros2_ws`
 
 `src` is where the packages as folders are. Add in the materov folder/package sent above in it (it will be pushed later). Within it
 + `setup.py`: take a look at the entry_points list that allows putting up nodes. More comments in the file
